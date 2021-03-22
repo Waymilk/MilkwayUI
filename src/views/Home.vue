@@ -5,8 +5,8 @@
       <h1>Milkway-UI</h1>
       <h2>一个厉害的UI框架</h2>
       <p class="actions">
-        <a href="javascript:;" class="btn">Github</a>
-        <a href="javascript:;" class="btn">开始</a>
+        <a href="https://giuthub.com" class="btn">Github</a>
+        <router-link to="/doc" class="btn">开始</router-link>
       </p>
     </div>
   </div>
@@ -45,6 +45,7 @@ export default {
       border-radius: 20px;
       background-color: #fff;
       text-decoration: none;
+      color: inherit;
     }
   }
 }

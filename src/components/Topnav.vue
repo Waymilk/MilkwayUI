@@ -5,11 +5,10 @@
     </div>
     <ul class="menu">
       <li>
-        <a href="">菜单2</a>
-        <!-- <router-link ></router-link>菜单2 -->
+        <router-link  to="/doc">菜单1</router-link>
       </li>
       <li>
-        <a href="">菜单2</a>
+        <router-link  to="/">菜单2</router-link>
       </li>
     </ul>
   </div>
