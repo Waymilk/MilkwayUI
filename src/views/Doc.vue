@@ -43,7 +43,7 @@ export default {
   display: flex;
   flex: 1;
   height: 100%;
-  padding-top: 70px;
+  padding-top: 58px;
   box-sizing: border-box;
 }
 aside{
@@ -80,5 +80,23 @@ main{
   width: calc(100% - 182px);
   margin-left: 182px;
   padding: 40px 60px 60px;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width : 4px;  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 1px;
+  }
+  &::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 10px;
+  box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background   : #ccc;
+  }
+  &::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background   : #ededed;
+  }
 }
 </style>
