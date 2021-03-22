@@ -1,6 +1,6 @@
 <template>
   <div class="topnav">
-    <div class="logo" @click="toggleMenu">
+    <div class="logo">
       LOGO
     </div>
     <ul class="menu">
@@ -11,6 +11,7 @@
         <router-link  to="/">菜单2</router-link>
       </li>
     </ul>
+    <span class="toggleAside" @click="toggleMenu"></span>
   </div>
 </template>
 <script lang="ts">
@@ -40,7 +41,7 @@ export default {
   padding: 14px;
   justify-content: space-between;
   align-items: center;
-  z-index: 20;
+  z-index: 10;
   box-shadow: 0 5px 5px rgb(51 51 51 / 10%);
   box-sizing:border-box;
   height: 58px;
@@ -51,6 +52,28 @@ export default {
     li{
       list-style:none;
       margin: 0 1em;
+    }
+  }
+  .toggleAside{
+    display: inline-block;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left: 16px;
+    display: none;
+    width: 20px;
+    height: 20px;
+    background: orangered;
+  }
+  @media (max-width:500px) {
+    .menu{
+      display: none;
+    }
+    .logo{
+      margin: 0 auto;
+    }
+    .toggleAside{
+      display: inline-block;
     }
   }
 }
