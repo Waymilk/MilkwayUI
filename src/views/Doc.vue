@@ -1,7 +1,7 @@
 <template>
   <div>
     <Topnav />
-    <content>
+    <div class="content">
     <aside v-show="menuVisible">
       <h2>组件列表</h2>
       <ol>
@@ -19,8 +19,10 @@
         </li>
       </ol>
     </aside>
-    <main>主内容</main>
-  </content>
+    <main>
+      <router-view />
+    </main>
+  </div>
   </div>
 </template>
 <script lang="ts">
@@ -37,11 +39,22 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.content{
+  display: flex;
+  flex: 1;
+  height: 100%;
+  padding-top: 70px;
+  box-sizing: border-box;
+}
 aside{
   background: lightblue;
   width: 150px;
   padding: 16px;
   padding-top: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
   h2{
     margin-bottom: 4px;
   }
@@ -56,10 +69,16 @@ aside{
     }
   }
   @media (max-width:500px) {
-    position: fixed;
-    top: 0;
-    left: 0;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    display: block;
 
   }
+}
+main{
+  width: calc(100% - 182px);
+  margin-left: 182px;
+  padding: 40px 60px 60px;
 }
 </style>
