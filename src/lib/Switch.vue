@@ -4,8 +4,19 @@
   </div>
 </template>
 <script lang="ts">
+import { ref } from 'vue'
 export default{
-
+  props:{
+    value:Boolean
+  },
+  setup(props,context){
+    const toggle = () =>{
+      context.emit('update:value',!props.value)
+    }
+    return {
+      toggle
+    }
+  }
 }
 </script>
 <style lang="scss">
@@ -33,7 +44,7 @@ $width: 40px;
       transition: all .3s;
     }
     &.z-checked {
-      background: #40babf;
+      background: #7e92da;
     }
     &.z-checked > span {
       left: 100%;
