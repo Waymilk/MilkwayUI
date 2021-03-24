@@ -19,7 +19,7 @@ export default{
   }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 $height: 20px;
 $width: 40px;
   .m-switch {
