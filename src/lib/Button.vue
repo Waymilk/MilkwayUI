@@ -108,10 +108,10 @@ export default {
     border-width: 2px;
     margin-right:4px;
     border-color: #409eff #409eff #409eff transparent;
-    animation: 1s linear infinite z-spin;
+    animation: 1s linear infinite milk-spin;
   }
 }
-@keyframes z-spin{
+@keyframes milk-spin{
   0% {
     transform: rotate(0deg);
   }
