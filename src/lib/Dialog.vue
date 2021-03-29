@@ -1,21 +1,23 @@
 <template>
   <template v-if="visible">
-    <div class="milk-dialog-overlay" @click="closeOnClickOverlay"></div>
-    <div class="milk-dialog-wrapper">
-      <div class="milk-dialog">
-        <header>
-          <slot name="title"/>
-          <span class="milk-dialog-close" @click="close"></span>
-        </header>
-        <main>
-          <slot name="content"/>
-        </main>
-        <footer>
-          <Button size="small" theme="primary" @click="ok">OK</Button>
-          <Button size="small" @click="cancel">Cancel</Button>
-        </footer>
+    <teleport to='body' >
+      <div class="milk-dialog-overlay" @click="closeOnClickOverlay"></div>
+      <div class="milk-dialog-wrapper">
+        <div class="milk-dialog">
+          <header>
+            <slot name="title"/>
+            <span class="milk-dialog-close" @click="close"></span>
+          </header>
+          <main>
+            <slot name="content"/>
+          </main>
+          <footer>
+            <Button size="small" theme="primary" @click="ok">OK</Button>
+            <Button size="small" @click="cancel">Cancel</Button>
+          </footer>
+        </div>
       </div>
-    </div>
+    </teleport>
   </template>
 </template>
 <script lang="ts">
