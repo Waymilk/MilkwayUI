@@ -18,10 +18,12 @@
       <p>第二行</p>
     </template>
   </Dialog>
+  <Button @click="showDialog">show</Button>
 </template>
 <script>
 import Dialog from '../lib/Dialog.vue'
 import Button from '../lib/Button.vue'
+import { openDialog } from '../lib/openDialog.ts'
 import { ref } from 'vue'
 export default {
   components:{
@@ -37,7 +39,19 @@ export default {
     const okFunction = () => {
       // return false
     }
-    return {onClick,isShow,okFunction}
+    const showDialog = () =>{
+      openDialog({
+        title:'标题',
+        content:'你好啊',
+        ok(){
+          console.log('ok函数')
+        },
+        cancel(){
+          console.log('cancel函数')
+        },
+      })
+    }
+    return {onClick,isShow,okFunction,showDialog}
   }
 }
 </script>
