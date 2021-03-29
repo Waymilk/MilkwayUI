@@ -1,5 +1,5 @@
 <!--
- * @Descripttion: 
+ * @Descripttion:
  * @Author: Milkway
  * @Date: 2021-03-25 09:17:59
  * @LastEditors: Milkway
@@ -14,7 +14,6 @@
 <script lang="ts">
 import { computed } from 'vue'
 export default {
-  inheritAttrs:false,
   props:{
     theme:{
       type:String,
@@ -35,7 +34,11 @@ export default {
       const loadingClass = loading ? "milk-button-loading" : "";
       return `milk-button-theme-${theme} milk-button-size-${size} ${loadingClass}`
     })
-    return {classes}
+    const goCLick = ()=>{
+      console.log(1233);
+
+    }
+    return {classes,goCLick}
   }
 }
 </script>
