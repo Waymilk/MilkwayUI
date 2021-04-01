@@ -12,8 +12,8 @@
             <slot name="content"/>
           </main>
           <footer>
-            <Button size="small" theme="primary" @click="ok">OK</Button>
-            <Button size="small" @click="cancel">Cancel</Button>
+            <Button size="normal" theme="primary" @click="ok">OK</Button>
+            <Button size="normal" @click="cancel">Cancel</Button>
           </footer>
         </div>
       </div>
@@ -102,7 +102,7 @@ $border-color: #d9d9d9;
   }
   > footer {
     border-top: 1px solid $border-color;
-    padding: 12px 2px;
+    padding: 4px 2px;
     text-align: right;
   }
   &-close {

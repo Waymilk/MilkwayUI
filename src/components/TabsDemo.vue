@@ -1,3 +1,10 @@
+<!--
+ * @Descripttion: 
+ * @Author: Milkway
+ * @Date: 2021-03-30 13:59:50
+ * @LastEditors: Milkway
+ * @LastEditTime: 2021-03-31 14:02:42
+-->
 <template>
   <div>Tabs 示例</div>
   <h1>示例1</h1>
@@ -22,3 +29,8 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+h1{
+  margin:16px 0
+}
+</style>

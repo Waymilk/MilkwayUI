@@ -1,3 +1,10 @@
+<!--
+ * @Descripttion: 
+ * @Author: Milkway
+ * @Date: 2021-03-23 16:13:22
+ * @LastEditors: Milkway
+ * @LastEditTime: 2021-03-31 14:06:23
+-->
 <template>
   <div>
     <Topnav />
@@ -46,6 +53,9 @@ export default {
       background-color: #fff;
       text-decoration: none;
       color: inherit;
+      &:first-child{
+        margin-left: 0
+      }
     }
   }
 }

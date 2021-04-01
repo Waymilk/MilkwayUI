@@ -2,7 +2,7 @@
   <div>
     <Topnav />
     <div class="content">
-    <aside v-show="menuVisible">
+    <aside  :class="{'z-show':menuVisible}">
       <h2>组件列表</h2>
       <ol>
         <li>
@@ -47,24 +47,35 @@ export default {
   box-sizing: border-box;
 }
 aside{
-  background: lightblue;
-  width: 150px;
-  padding: 16px;
+  background: #fff;
+  border-right: 2px solid #f7c9c9;
+  width: 200px;
   padding-top: 70px;
   position: fixed;
   top: 0;
-  left: 0;
+  left: -100%;
   bottom: 0;
+  z-index: 5;
+  transition: left 0.5s;
+  text-align: center;
+  box-shadow: 5px 0 5px rgb(51 51 51 / 10%);
+  &.z-show{
+    left:0
+  }
   h2{
-    margin-bottom: 4px;
+    margin: 14px 0;
   }
   ol{
     li{
-      padding: 4px 0;
+      height:56px;
+      cursor:pointer;
+      line-height: 56px;
       color: #000;
-      margin: 1em 0;
       &:hover{
-        text-decoration: underline;
+        background: #d3dde0;
+      }
+      a{
+        display: block;
       }
     }
   }

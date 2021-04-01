@@ -3,7 +3,7 @@
  * @Author: Milkway
  * @Date: 2021-03-25 09:17:59
  * @LastEditors: Milkway
- * @LastEditTime: 2021-03-25 15:00:33
+ * @LastEditTime: 2021-03-30 14:03:07
 -->
 <template>
   <div>Dialog示例</div>
@@ -14,8 +14,8 @@
       <strong>标题</strong>
     </template>
     <template v-slot:content>
-      <p>第一行</p>
-      <p>第二行</p>
+     <p>这是一段信息</p>
+     <p>这是一段信息</p>
     </template>
   </Dialog>
   <Button @click="showDialog">show</Button>
