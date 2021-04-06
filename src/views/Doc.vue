@@ -3,6 +3,18 @@
     <Topnav isMenuIconShow />
     <div class="content">
     <aside  :class="{'z-show':menuVisible}">
+      <h2>文档</h2>
+      <ol>
+        <li>
+          <router-link to="/doc/intro">介绍</router-link>
+        </li>
+        <li>
+          <router-link to="/doc/install">安装</router-link>
+        </li>
+        <li>
+          <router-link to="/doc/get-started">开始</router-link>
+        </li>
+      </ol>
       <h2>组件列表</h2>
       <ol>
         <li>
@@ -58,13 +70,14 @@ aside{
   bottom: 0;
   z-index: 5;
   transition: left 0.5s;
-  text-align: center;
+  text-align: left;
   box-shadow: 5px 0 5px rgb(51 51 51 / 10%);
   &.z-show{
     left:0
   }
   h2{
     margin: 14px 0;
+    padding-left: 20px;
   }
   ol{
     li{
@@ -75,8 +88,12 @@ aside{
       &:hover{
         background: #d3dde0;
       }
+      .router-link-active{
+        background: #d3dde0;
+      }
       a{
         display: block;
+        padding-left: 20px;
       }
     }
   }
