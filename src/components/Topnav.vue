@@ -7,11 +7,11 @@
 -->
 <template>
   <div class="topnav">
-    <div class="logo">
+    <router-link to="/" class="logo">
       <svg class="icon" aria-hidden="true">
         <use xlink:href="#icon-milk"></use>
       </svg>
-    </div>
+    </router-link>
     <ul class="menu">
       <li>
         <router-link  to="/doc">菜单1</router-link>
@@ -20,7 +20,7 @@
         <router-link  to="/">菜单2</router-link>
       </li>
     </ul>
-    <span class="toggleAside" @click="toggleMenu">
+    <span v-if="isMenuIconShow" class="toggleAside" @click="toggleMenu">
       <svg class="icon" aria-hidden="true">
         <use xlink:href="#icon-Menu"></use>
       </svg>
@@ -30,6 +30,12 @@
 <script lang="ts">
 import { inject, Ref } from 'vue'
 export default {
+  props:{
+    isMenuIconShow:{
+      type:Boolean,
+      default:false
+    }
+  },
   setup() {
     const menuVisible = inject<Ref<boolean>>('menuVisible')
     console.log(`topnav 获取的 menuVisible 的值为${menuVisible.value}`);

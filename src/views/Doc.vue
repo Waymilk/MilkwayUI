@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Topnav />
+    <Topnav isMenuIconShow />
     <div class="content">
     <aside  :class="{'z-show':menuVisible}">
       <h2>组件列表</h2>
