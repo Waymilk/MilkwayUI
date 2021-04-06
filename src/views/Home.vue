@@ -1,5 +1,5 @@
 <!--
- * @Descripttion: 
+ * @Descripttion:
  * @Author: Milkway
  * @Date: 2021-03-23 16:13:22
  * @LastEditors: Milkway
@@ -15,6 +15,35 @@
         <a href="https://giuthub.com" class="btn">Github</a>
         <router-link to="/doc" class="btn">开始</router-link>
       </p>
+    </div>
+    <div class="features">
+      <div class="bar">
+        <svg class="icon">
+          <use xlink:href="#icon-Vue"></use>
+        </svg>
+        <div class="text">
+          <h3 class="title">基于Vue 3</h3>
+          <p class="desc">骄傲地使用了Vue 3 Composition API</p>
+        </div>
+      </div>
+      <div class="bar">
+        <svg class="icon">
+          <use xlink:href="#icon-ts"></use>
+        </svg>
+        <div class="text">
+          <h3 class="title">基于TypeScript</h3>
+          <p class="desc">源代码采用TypeScript书写（非严格检查）</p>
+        </div>
+      </div>
+      <div class="bar">
+        <svg class="icon">
+          <use xlink:href="#icon-light"></use>
+        </svg>
+        <div class="text">
+          <h3 class="title">代码易读</h3>
+          <p class="desc">每个组件的代码都极其简洁</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -57,6 +86,45 @@ export default {
         margin-left: 0
       }
     }
+  }
+}
+.features{
+  display: flex;
+  width: 400px;
+  margin: 64px auto;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: space-around;
+  .bar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin:  30px 0;
+    .text{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-left: 12px;
+      .title{
+        font-size: 28px;
+        font-weight: 400;
+      }
+      .desc{
+        font-size: 14px;
+      }
+    }
+    .icon{
+      font-size: 64px;
+    }
+  }
+  @media (min-width:400px) {
+    width:400px
+  }
+  @media (min-width:800px) {
+    width:800px
+  }
+  @media (min-width:1200px) {
+    width:1200px
   }
 }
 </style>

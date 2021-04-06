@@ -1,5 +1,5 @@
 <!--
- * @Descripttion: 
+ * @Descripttion:
  * @Author: Milkway
  * @Date: 2021-03-23 16:13:22
  * @LastEditors: Milkway
@@ -8,7 +8,9 @@
 <template>
   <div class="topnav">
     <div class="logo">
-      <icon-svg icon-class="milk" />
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-milk"></use>
+      </svg>
     </div>
     <ul class="menu">
       <li>
@@ -19,7 +21,9 @@
       </li>
     </ul>
     <span class="toggleAside" @click="toggleMenu">
-      <icon-svg icon-class="Menu" />
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-Menu"></use>
+      </svg>
     </span>
   </div>
 </template>
