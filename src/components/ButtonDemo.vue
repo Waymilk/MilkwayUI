@@ -3,11 +3,10 @@
  * @Author: Milkway
  * @Date: 2021-03-25 09:17:59
  * @LastEditors: Milkway
- * @LastEditTime: 2021-03-25 15:00:33
+ * @LastEditTime: 2021-04-06 14:57:56
 -->
 <template>
-  <div>Button示例</div>
-  <h1>示例1</h1>
+  <h1>Button 按钮</h1>
   <div>
     <Button>默认按钮</Button>
     <Button theme="primary">普通按钮</Button>

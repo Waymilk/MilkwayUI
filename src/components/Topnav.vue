@@ -3,7 +3,7 @@
  * @Author: Milkway
  * @Date: 2021-03-23 16:13:22
  * @LastEditors: Milkway
- * @LastEditTime: 2021-03-23 16:32:41
+ * @LastEditTime: 2021-04-06 14:18:49
 -->
 <template>
   <div class="topnav">
@@ -39,7 +39,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .topnav{
-  background:#fff;
   position: fixed;
   top: 0;
   left: 0;

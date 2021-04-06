@@ -3,11 +3,10 @@
  * @Author: Milkway
  * @Date: 2021-03-25 09:17:59
  * @LastEditors: Milkway
- * @LastEditTime: 2021-03-30 14:03:07
+ * @LastEditTime: 2021-04-06 15:00:47
 -->
 <template>
-  <div>Dialog示例</div>
-  <h1>示例1</h1>
+  <h1>Dialog 对话框</h1>
   <Button @click="onClick">toggle</Button>
   <Dialog  v-model:visible="isShow" :closeOnClickOverlay="true" :ok="okFunction">
     <template v-slot:title>

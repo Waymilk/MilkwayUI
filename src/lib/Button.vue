@@ -3,7 +3,7 @@
  * @Author: Milkway
  * @Date: 2021-03-25 09:17:59
  * @LastEditors: Milkway
- * @LastEditTime: 2021-03-25 15:07:34
+ * @LastEditTime: 2021-04-06 14:33:56
 -->
 <template>
   <button class="milk-button" :class="classes">
@@ -94,7 +94,7 @@ export default {
     padding: 14px 26px;
     font-size: 18px;
   }
-  &-text{
+  &-theme-text{
     border: none;
     padding: 0;
     background: none;
