@@ -1,31 +1,39 @@
-<!--
- * @Descripttion: 
- * @Author: Milkway
- * @Date: 2021-03-23 16:13:22
- * @LastEditors: Milkway
- * @LastEditTime: 2021-04-07 14:14:04
--->
 <template>
-  <h1>Switch 开关</h1>
-  <Switch v-model:value="switch1" />
-  <Switch v-model:value="switch2" disabled />
+  <div>
+    <h1 class="first-title">Switch 组件示例</h1>
+    <section class="second-title">
+      <h2>基础用法</h2>
+      <p>
+        使用<span>v-model</span>绑定一个<span>Boolean</span>类型的变量到<span>Switch</span>组件
+      </p>
+    </section>
+    <Demo :component="SwitchNormal" />
+    <section class="second-title">
+      <h2>支持disabled属性</h2>
+      <p>
+        在<span>Switch</span>组件中添加<span>disabled</span>属性，以此来<span>禁用Switch</span>组件
+      </p>
+    </section>
+    <Demo :component="SwitchDisabled" />
+  </div>
 </template>
 <script lang="ts">
-import { ref } from 'vue'
-import Switch from '../lib/Switch.vue'
-export default{
-  components:{
-    Switch
+import SwitchNormal from "./SwitchDemo/SwitchNormal.vue";
+import SwitchDisabled from "./SwitchDemo/SwitchDisabled.vue";
+import Demo from "./Demo.vue";
+import { ref } from "vue";
+export default {
+  components: { Demo },
+  setup() {
+    return { SwitchNormal, SwitchDisabled };
   },
-  setup(){
-    const switch1 = ref(false)
-    const switch2 = ref(false)
-    return {switch1,switch2}
-  }
-}
+};
 </script>
 <style lang="scss" scoped>
-h1{
-  margin: 30px 0;
+.second-title{
+  margin: 40px 0;
+  h2{
+    margin: 30px 0;
+  }
 }
 </style>
