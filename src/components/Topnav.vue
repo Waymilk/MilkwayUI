@@ -3,7 +3,7 @@
  * @Author: Milkway
  * @Date: 2021-03-23 16:13:22
  * @LastEditors: Milkway
- * @LastEditTime: 2021-04-06 14:18:49
+ * @LastEditTime: 2021-04-07 13:58:23
 -->
 <template>
   <div class="topnav">
@@ -14,10 +14,10 @@
     </router-link>
     <ul class="menu">
       <li>
-        <router-link  to="/doc">菜单1</router-link>
+        <router-link  to="/doc/intro">文档</router-link>
       </li>
       <li>
-        <router-link  to="/">菜单2</router-link>
+        <a  href="https://github.com/Waymilk">Github</a>
       </li>
     </ul>
     <span v-if="isMenuIconShow" class="toggleAside" @click="toggleMenu">

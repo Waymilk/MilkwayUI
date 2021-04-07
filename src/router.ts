@@ -1,3 +1,10 @@
+/*
+ * @Descripttion: 
+ * @Author: Milkway
+ * @Date: 2021-03-23 16:13:22
+ * @LastEditors: Milkway
+ * @LastEditTime: 2021-04-07 13:59:45
+ */
 import {createWebHashHistory,createRouter} from 'vue-router'
 const history  = createWebHashHistory()
 import Home from './views/Home.vue'

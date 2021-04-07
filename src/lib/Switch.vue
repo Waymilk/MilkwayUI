@@ -1,13 +1,24 @@
+<!--
+ * @Descripttion: 
+ * @Author: Milkway
+ * @Date: 2021-03-25 09:17:59
+ * @LastEditors: Milkway
+ * @LastEditTime: 2021-04-07 14:12:33
+-->
 <template>
   <div>
-    <button @click="toggle" class="milk-switch" :class="{'z-checked' : value}"><span></span></button>
+    <button @click="toggle" class="milk-switch" :disabled="disabled" :class="{'z-checked' : value}"><span></span></button>
   </div>
 </template>
 <script lang="ts">
 import { ref } from 'vue'
 export default{
   props:{
-    value:Boolean
+    value:Boolean,
+    disabled:{
+      type:Boolean,
+      default:false
+    }
   },
   setup(props,context){
     const toggle = () =>{
@@ -60,6 +71,9 @@ $width: 40px;
     > span {
       width: $height + 2px;
     }
+  }
+  &:disabled{
+    cursor: not-allowed;
   }
 }
 </style>

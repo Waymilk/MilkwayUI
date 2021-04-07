@@ -3,7 +3,7 @@
  * @Author: Milkway
  * @Date: 2021-03-23 16:13:22
  * @LastEditors: Milkway
- * @LastEditTime: 2021-03-31 14:06:23
+ * @LastEditTime: 2021-04-07 14:03:30
 -->
 <template>
   <div>
@@ -12,8 +12,8 @@
       <h1>Milkway-UI</h1>
       <h2>一个厉害的UI框架</h2>
       <p class="actions">
-        <a href="https://giuthub.com" class="btn">Github</a>
-        <router-link to="/doc" class="btn">开始</router-link>
+        <a href="https://github.com/Waymilk" class="btn">Github</a>
+        <router-link to="/doc/intro" class="btn">开始</router-link>
       </p>
     </div>
     <div class="features">
@@ -23,7 +23,7 @@
         </svg>
         <div class="text">
           <h3 class="title">基于Vue 3</h3>
-          <p class="desc">骄傲地使用了Vue 3 Composition API</p>
+          <p class="desc">使用了Vue 3 Composition API</p>
         </div>
       </div>
       <div class="bar">

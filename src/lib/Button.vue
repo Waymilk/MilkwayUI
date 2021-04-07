@@ -3,11 +3,11 @@
  * @Author: Milkway
  * @Date: 2021-03-25 09:17:59
  * @LastEditors: Milkway
- * @LastEditTime: 2021-04-06 14:33:56
+ * @LastEditTime: 2021-04-07 14:35:49
 -->
 <template>
   <button class="milk-button" :class="classes">
-    <span class="milk-button-spin" v-if="loading"></span>
+    <span class="milk-button-spin" :style="loadingStyle" v-if="loading"></span>
     <slot />
   </button>
 </template>
@@ -26,19 +26,22 @@ export default {
     loading:{
       type:Boolean,
       default:false
+    },
+    loadingColor:{
+      type:String,
+      default:'#409eff'
     }
   },
   setup(props,context) {
-    const {size,theme,loading} = props
+    const {size,theme,loading,loadingColor} = props
     const classes = computed(()=>{
       const loadingClass = loading ? "milk-button-loading" : "";
       return `milk-button-theme-${theme} milk-button-size-${size} ${loadingClass}`
     })
-    const goCLick = ()=>{
-      console.log(1233);
-
-    }
-    return {classes,goCLick}
+    const loadingStyle = computed(()=>{
+      return `border-color: ${loadingColor} ${loadingColor} ${loadingColor} transparent;`
+    })
+    return {classes,loadingStyle}
   }
 }
 </script>
@@ -49,8 +52,13 @@ export default {
   border-color: $color;
   &:hover{
     background-color:rgba( $color,0.7);
-    border-color:rgba( $color,0.7);
+    border-color:rgba( $color,0);
     color: #fff;
+  }
+  &:disabled{
+    background-color:rgba( $color,0.5);
+    border-color:rgba( $color,0);
+    cursor: not-allowed;
   }
 }
 .milk-button{
@@ -77,6 +85,17 @@ export default {
   &:focus{
     outline: none;
   }
+  &-theme-default{
+    &:disabled{
+      background-color:rgba( #fff,0.5);
+      cursor: not-allowed;
+      color: #c0c4cc;
+      &:hover{
+        border-color:#c0c4cc;
+        color: #c0c4cc;
+      }
+    }
+  }
   &-theme-primary{
     @include hover-color(#409eff)
   }
@@ -98,6 +117,15 @@ export default {
     border: none;
     padding: 0;
     background: none;
+    &:disabled{
+      background-color:rgba( #fff,0.5);
+      cursor: not-allowed;
+      color: #c0c4cc;
+      &:hover{
+        border-color:#c0c4cc;
+        color: #c0c4cc;
+      }
+    }
     &:hover{
       color:#409eff;
     }
@@ -113,6 +141,7 @@ export default {
     border-color: #409eff #409eff #409eff transparent;
     animation: 1s linear infinite milk-spin;
   }
+  
 }
 @keyframes milk-spin{
   0% {
