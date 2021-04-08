@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="first-title">Switch 组件示例</h1>
+    <h1 class="first-title">Switch 开关</h1>
     <section class="second-title">
       <h2>基础用法</h2>
       <p>
@@ -15,17 +15,35 @@
       </p>
     </section>
     <Demo :component="SwitchDisabled" />
+    <Attr :data="data"></Attr>
   </div>
 </template>
 <script lang="ts">
 import SwitchNormal from "./SwitchDemo/SwitchNormal.vue";
 import SwitchDisabled from "./SwitchDemo/SwitchDisabled.vue";
 import Demo from "./Demo.vue";
+import Attr from "./Attr.vue";
 import { ref } from "vue";
 export default {
-  components: { Demo },
+  components: { Demo,Attr },
   setup() {
-    return { SwitchNormal, SwitchDisabled };
+    const data = ref([
+      {
+        params: 'v-model:value',
+        desc: '是否选中状态',
+        type: 'boolean',
+        select: 'false / true',
+        default: 'false',
+      },
+      {
+        params: 'disabled',
+        desc: '是否禁用状态',
+        type: 'boolean',
+        select: 'false / true',
+        default: 'false',
+      }
+    ]);
+    return { SwitchNormal, SwitchDisabled,data };
   },
 };
 </script>
