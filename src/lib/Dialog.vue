@@ -2,7 +2,7 @@
   <template v-if="visible">
     <teleport to='body' >
       <div class="milk-dialog-overlay" @click="closeOnClickOverlay"></div>
-      <div class="milk-dialog-wrapper">
+      <div class="milk-dialog-wrapper" :style="`top:${top}px;width:${width}`">
         <div class="milk-dialog">
           <header>
             <slot name="title"/>
@@ -27,6 +27,13 @@ export default {
     visible:{
       type:Boolean,
       default:false
+    },
+    width:{
+      type:String
+    },
+    top:{
+      type:String,
+      default:'300'
     },
     closeOnClickOverlay:{
       type:Boolean,
@@ -82,7 +89,7 @@ $border-color: #d9d9d9;
     z-index: 30;
   }
   &-wrapper {
-    min-width: 60%;
+    width: 60%;
     position: fixed;
     left: 50%;
     top: 50%;
@@ -98,7 +105,8 @@ $border-color: #d9d9d9;
     font-size: 20px;
   }
   > main {
-    padding: 12px 16px;
+    padding: 24px;
+    font-size: 14px;
   }
   > footer {
     border-top: 1px solid $border-color;

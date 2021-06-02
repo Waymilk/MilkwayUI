@@ -19,6 +19,6 @@ export default {
 <style lang="scss" scoped>
 .layout{
   height: 100vh;
-  overflow: hidden;
+  overflow-y: scroll;
 }
 </style>

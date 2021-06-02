@@ -90,7 +90,6 @@ export default {
 }
 .features{
   display: flex;
-  width: 400px;
   margin: 64px auto;
   flex-wrap: wrap;
   align-content: stretch;

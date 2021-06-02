@@ -31,7 +31,7 @@
         </li>
       </ol>
     </aside>
-    <main>
+    <main >
       <router-view />
     </main>
   </div>
