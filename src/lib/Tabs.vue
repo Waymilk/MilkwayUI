@@ -40,11 +40,10 @@ export default {
         const left = left1 - left2;
         indicator.value.style.width = width + 'px';
         indicator.value.style.left = left + 'px';
-      }, {   // 解决异步
-        flush: 'post', //效果更新需要缓冲时间
+      }, {
+        flush: 'post',
       });
     });
-    //  tab-item  节点 （获取插槽内容）
     const defaults = context.slots.default();
     defaults.forEach((tag) => {
       if (tag.type !== Tab) {
@@ -54,7 +53,6 @@ export default {
     const titles = defaults.map((tag) => {
       return tag.props.title;
     });
-    // 被选择的节点
     const current = computed(() => {
       return defaults.filter((tag) => {
         return tag.props.title === props.selected;

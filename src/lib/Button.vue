@@ -1,10 +1,3 @@
-<!--
- * @Descripttion:
- * @Author: Milkway
- * @Date: 2021-03-25 09:17:59
- * @LastEditors: Milkway
- * @LastEditTime: 2021-04-07 14:35:49
--->
 <template>
   <button class="milk-button" :class="classes">
     <span class="milk-button-spin" :style="loadingStyle" v-if="loading"></span>
@@ -141,7 +134,7 @@ export default {
     border-color: #409eff #409eff #409eff transparent;
     animation: 1s linear infinite milk-spin;
   }
-  
+
 }
 @keyframes milk-spin{
   0% {
