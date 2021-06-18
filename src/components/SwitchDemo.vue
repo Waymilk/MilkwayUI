@@ -43,7 +43,7 @@ export default {
         default: 'false',
       }
     ]);
-    return { SwitchNormal, SwitchDisabled,data };
+    return { SwitchNormal, SwitchDisabled, data };
   },
 };
 </script>

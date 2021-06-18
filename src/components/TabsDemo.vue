@@ -1,5 +1,5 @@
 <!--
- * @Descripttion: 
+ * @Descripttion:
  * @Author: Milkway
  * @Date: 2021-03-30 13:59:50
  * @LastEditors: Milkway
@@ -7,24 +7,34 @@
 -->
 <template>
   <h1>Tabs 标签</h1>
-  <Tabs v-model:selected="title">
-    <Tab title="学习">学习</Tab>
-    <Tab title="吃饭">吃饭</Tab>
-    <Tab title="睡觉">睡觉</Tab>
-  </Tabs>
+  <section class="second-title">
+    <h2>基础用法</h2>
+  </section>
+  <Demo :component="TabsNormal" />
+  <Attr :data="data"></Attr>
 </template>
 <script lang="ts">
-import Tabs from '../lib/Tabs.vue'
-import Tab from '../lib/Tab.vue'
+import TabsNormal from "./TabsDemo/TabsNormal.vue";
 import { ref } from 'vue'
+import Demo from "./Demo.vue";
+import Attr from "./Attr.vue";
 export default {
   components:{
-    Tabs,
-    Tab
+    Demo,
+    Attr
   },
   setup(props) {
     const title = ref('学习')
-    return {title};
+    const data = ref([
+      {
+        params: 'tab',
+        desc: 'tab页签',
+        type: 'component',
+        select: 'tab',
+        default: '',
+      }
+    ]);
+    return {title,TabsNormal, data};
   }
 }
 </script>
