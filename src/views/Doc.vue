@@ -29,6 +29,9 @@
         <li>
           <router-link to="/doc/tabs">Tabs 组件</router-link>
         </li>
+        <li>
+          <a href="javascript:;">持续完善中...</a>
+        </li>
       </ol>
     </aside>
     <main >

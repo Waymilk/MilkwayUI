@@ -21,4 +21,9 @@ export default {
   height: 100vh;
   overflow-y: scroll;
 }
+::-webkit-scrollbar
+{
+  width: 0;
+  height: 0;
+}
 </style>
