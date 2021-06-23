@@ -4,7 +4,7 @@
 
 <template>
   <Button @click="onClick">打开对话框</Button>
-  <Dialog  v-model:visible="isShow" :closeOnClickOverlay="true" :ok="okFunction">
+  <Dialog  v-model:visible="isShow" :closeOnClickOverlay="true" :ok="okFunction" :cancel="cancelFunction">
     <template v-slot:title>
       <strong>标题</strong>
     </template>
@@ -15,7 +15,8 @@
 </template>
 
 <script lang="ts">
-import {Button,Dialog} from "../../lib/index";
+import Dialog from "../../lib/Dialog.vue";
+import Button from "../../lib/Button.vue";
 import { ref } from "vue";
 export default {
   components: {
@@ -30,7 +31,10 @@ export default {
     const okFunction = () => {
       isShow.value = false
     }
-    return {onClick,isShow,okFunction}
+    const cancelFunction = ()=>{
+      isShow.value = false
+    }
+    return {onClick,isShow,okFunction,cancelFunction}
   }
 };
 </script>

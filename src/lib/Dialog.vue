@@ -59,16 +59,16 @@ export default {
       }
     }
     const ok = ()=>{
-      if (props.ok?.() !== false) {
+      if (props.ok && props.ok() !== false) {
         close()
       }
     }
     const cancel = ()=>{
-      if (props.cancel?.() !== false) {
+      if (props.cancel && props.cancel() !== false) {
         close()
       }
     }
-    return {cancel,closeOnClickOverlay,ok,close}
+    return {close,closeOnClickOverlay,ok,cancel}
   }
 }
 </script>

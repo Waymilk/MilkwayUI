@@ -1,5 +1,5 @@
 <template>
-  <router-view class="layout" />
+  <router-view class="layout" ></router-view>
 </template>
 <script lang="ts">
 import { provide, ref } from 'vue'

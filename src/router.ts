@@ -6,12 +6,8 @@
  * @LastEditTime: 2021-04-07 13:59:45
  */
 import {createWebHashHistory,createRouter} from 'vue-router'
-const history  = createWebHashHistory()
 import Home from './views/Home.vue'
 import Doc from './views/Doc.vue'
-import Intro from './views/Intro.vue'
-import Install from './views/Install.vue'
-import GetStarted from './views/GetStarted.vue'
 import SwitchDemo from './components/SwitchDemo.vue'
 import ButtonDemo from './components/ButtonDemo.vue'
 import DialogDemo from './components/DialogDemo.vue'
@@ -21,8 +17,11 @@ import intro from './markdown/intro.md'
 import install from './markdown/install.md'
 import getStarted from './markdown/get-started.md'
 import { h } from 'vue'
-const md = string => h(Markdown,{content:string,key:string})
 
+const md = string => {
+  return h(Markdown,{content:string,key:string})
+}
+const history  = createWebHashHistory()
 export const router  = createRouter({
   history,
   routes:[

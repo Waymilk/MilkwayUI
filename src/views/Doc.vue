@@ -88,16 +88,17 @@ aside{
       cursor:pointer;
       line-height: 56px;
       color: #000;
+      a{
+        display: block;
+        padding-left: 20px;
+      }
       &:hover{
         background: #d3dde0;
       }
       .router-link-active{
         background: #d3dde0;
       }
-      a{
-        display: block;
-        padding-left: 20px;
-      }
+
     }
   }
   @media (max-width:500px) {
