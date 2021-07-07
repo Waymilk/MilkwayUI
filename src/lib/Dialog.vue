@@ -49,6 +49,7 @@ export default {
   components:{
     Button
   },
+  emits: ["update:visible"],
   setup(props,context){
     const close = ()=>{
       context.emit('update:visible',!props.visible)

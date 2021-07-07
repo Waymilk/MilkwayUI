@@ -35,7 +35,7 @@
       </ol>
     </aside>
     <main >
-      <router-view />
+      <router-view @click="change" />
     </main>
   </div>
   </div>
@@ -49,7 +49,12 @@ export default {
   },
   setup() {
     const menuVisible = inject<Ref<boolean>>('menuVisible')
-    return {menuVisible}
+    const change = () =>{
+      if (document.body.clientWidth < 500) {
+        menuVisible.value = false
+      }
+    }
+    return {menuVisible,change}
   }
 }
 </script>
